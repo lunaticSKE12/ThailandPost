@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">ThailandPost</string>
+    <string name="carnation_title">นมผงคาร์เนชั่น รสวนิลา 550 กรัม</string>
+    <string name="carnation_detail1">&#8211; ซองเปล่า หรือ มุมซอง ที่ระบุ ข้อความ 8 แลก 1</string>
+    <string name="carnation_detail2">&#8211; ได้รับ นมผงคาร์เนชั่น รสวนิลา 550 กรัม จำนวน 1 ถุง</string>
+    <string name="carnation_detail3">&#8211; ไม่จำกัดสิทธิ จำนวน/คน</string>
+    <string name="carnation_detail4">&#8211; 1 มกราคม 2561 &#8211; 31 พฤษภาคม 2561</string>
+    <string name="officerRegister">ลงทะเบียนเจ้าหน้าที่</string>
+    <string name="name">ชื่อ :</string>
+    <string name="phone_number">เบอร์ :</string>
+    <string name="post">ปณ :</string>
+    <string name="register">ลงทะเบียน</string>
+    <string name="name_hint">Name</string>
+    <string name="phone_number_hint">Phone number</string>
+    <string-array name="post_array">
+        <item>แจ้งวัฒนะ</item>
+        <item>ดอนเมือง</item>
+        <item>หลักสี่</item>
+        <item>ราชดำเนิน</item>
+        <item>รามอินทรา</item>
+        <item>รามคำแหง</item>
+        <item>ลาดพร้าว</item>
+        <item>มักกะสัน </item>
+        <item>ดินแดง </item>
+        <item>จตุจักร </item>
+    </string-array>
 </resources>
