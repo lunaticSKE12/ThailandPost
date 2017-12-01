@@ -10,11 +10,22 @@ import android.widget.Toast;
 public class UserDetailActivity extends AppCompatActivity {
 
     TextView nextBtn;
+    Goods goods;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_detail);
+
+        // get parameter goods from last Activity
+        Intent intent = getIntent();
+        String exchange_item = intent.getStringExtra("exchange_item");
+        String balance_item = intent.getStringExtra("balance_item");
+        int exchange_item_number = Integer.parseInt(exchange_item);
+        int balance_item_number = Integer.parseInt(balance_item);
+        Toast.makeText(getApplicationContext(),
+                exchange_item + " + " + balance_item, Toast.LENGTH_SHORT).show();
+        goods = new Goods(exchange_item_number, balance_item_number);
 
         nextBtn = findViewById(R.id.nextBtn_id);
         nextBtn.setOnClickListener(new View.OnClickListener() {
@@ -22,6 +33,9 @@ public class UserDetailActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "next", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), serialActivity.class);
+                // pass parameter goods to next Activity
+                intent.putExtra("exchange_item", goods.exchange_toString());
+                intent.putExtra("balance_item" , goods.balance_toString());
                 startActivity(intent);
             }
         });

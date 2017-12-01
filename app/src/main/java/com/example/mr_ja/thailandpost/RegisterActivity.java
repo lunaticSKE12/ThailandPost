@@ -15,11 +15,15 @@ public class RegisterActivity extends AppCompatActivity {
     EditText name, phone;
     TextView registerBtn;
     Spinner spinner;
+    Goods goods;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        name = findViewById(R.id.name_editText_id);
+        phone = findViewById(R.id.phone_editText_id);
 
         spinner = findViewById(R.id.post_spinner_id);
         // Create an ArrayAdapter using the string array and a default spinner layout
@@ -30,11 +34,8 @@ public class RegisterActivity extends AppCompatActivity {
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
 
-//        spinner = findViewById(R.id.post_spinner_id);
-//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-//                android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.post_array));
-//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        spinner.setAdapter(adapter);
+        //create object goods
+        goods = new Goods(30, 100);
 
 
         registerBtn = findViewById(R.id.nextrBtn_id);
@@ -43,6 +44,9 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "regis", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), ExchangeActivity.class);
+                // pass parameter goods to next Activity
+                intent.putExtra("exchange_item", goods.exchange_toString());
+                intent.putExtra("balance_item" , goods.balance_toString());
                 startActivity(intent);
             }
         });
