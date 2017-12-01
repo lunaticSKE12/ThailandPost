@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.Space;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,7 +37,7 @@ public class RegisterActivity extends AppCompatActivity {
 //        spinner.setAdapter(adapter);
 
 
-        registerBtn = findViewById(R.id.registerBtn_id);
+        registerBtn = findViewById(R.id.nextrBtn_id);
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

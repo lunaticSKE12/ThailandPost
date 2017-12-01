@@ -7,21 +7,21 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class UserDetailActivity extends AppCompatActivity {
 
-    TextView registerBtn;
+    TextView nextBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_user_detail);
 
-        registerBtn = findViewById(R.id.nextrBtn_id);
-        registerBtn.setOnClickListener(new View.OnClickListener() {
+        nextBtn = findViewById(R.id.nextBtn_id);
+        nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "regis", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+                Toast.makeText(getApplicationContext(), "next", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), serialActivity.class);
                 startActivity(intent);
             }
         });

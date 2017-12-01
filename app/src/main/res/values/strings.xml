@@ -18,6 +18,11 @@
     <string name="exchangeBtn">แลกของ</string>
     <string name="post_text">ปณ. หลักสี่</string>
     <string name="name_text">ผู้รับแลก John Doe</string>
+    <string name="user_detail">ข้อมูลผู้แลก</string>
+    <string name="sum_item">จำนวน :</string>
+    <string name="next">ต่อไป</string>
+    <string name="keepbag">เก็บซอง</string>
+    <string name="number">เลขที่</string>
     <string-array name="post_array">
         <item>แจ้งวัฒนะ</item>
         <item>ดอนเมือง</item>
