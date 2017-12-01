@@ -28,7 +28,7 @@
         android:layout_marginTop="8dp"
         android:textColor="@color/colorWhite"
         android:text="@string/carnation_title"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar_id"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/toolbar_id"

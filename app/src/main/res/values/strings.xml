@@ -12,6 +12,12 @@
     <string name="register">ลงทะเบียน</string>
     <string name="name_hint">Name</string>
     <string name="phone_number_hint">Phone number</string>
+    <string name="exchange">แลกไป</string>
+    <string name="balance">คงเหลือ</string>
+    <string name="unit">ถุง</string>
+    <string name="exchangeBtn">แลกของ</string>
+    <string name="post_text">ปณ. หลักสี่</string>
+    <string name="name_text">ผู้รับแลก John Doe</string>
     <string-array name="post_array">
         <item>แจ้งวัฒนะ</item>
         <item>ดอนเมือง</item>
