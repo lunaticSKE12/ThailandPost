@@ -35,18 +35,19 @@ public class RegisterActivity extends AppCompatActivity {
         spinner.setAdapter(adapter);
 
         //create object goods
-        goods = new Goods(30, 100);
+        goods = new Goods(40, 110, 7399);
 
 
         registerBtn = findViewById(R.id.nextrBtn_id);
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "regis", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), "regis", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), ExchangeActivity.class);
                 // pass parameter goods to next Activity
                 intent.putExtra("exchange_item", goods.exchange_toString());
                 intent.putExtra("balance_item" , goods.balance_toString());
+                intent.putExtra("serial_item", goods.serial_toString());
                 startActivity(intent);
             }
         });

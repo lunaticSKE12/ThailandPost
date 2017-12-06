@@ -1,5 +1,7 @@
 package com.example.mr_ja.thailandpost;
 
+import android.content.Intent;
+
 import java.io.Serializable;
 
 /**
@@ -12,20 +14,33 @@ public class Goods{
 
     private int exchange_item = 0;
     private int balance_item = 0;
+    private int serial = 0;
 
     /**
      * Goods constructor
      * @param exchange_item is number of exchange item in store.
      * @param balance_item is number of balance item in store.
      */
-    public Goods(int exchange_item, int balance_item) {
+    public Goods(int exchange_item, int balance_item, int serial) {
         this.exchange_item = exchange_item;
         this.balance_item = balance_item;
+        this.serial = serial;
     }
 
     public Goods() {
         this.exchange_item = 30;
+
         this.balance_item = 100;
+        this.serial = 7392;
+    }
+
+
+    public int getSerial() {
+        return serial;
+    }
+
+    public void setSerial(int serial) {
+        this.serial = serial;
     }
 
     /**
@@ -76,11 +91,14 @@ public class Goods{
         return Integer.toString(balance_item);
     }
 
+    public String serial_toString() {return Integer.toString(serial); }
+
     /**
      * update_goods is for update exchange_item and balance_item in store.
      */
     public void update_goods(){
         this.exchange_item--;
         this.balance_item--;
+        this.serial++;
     }
 }

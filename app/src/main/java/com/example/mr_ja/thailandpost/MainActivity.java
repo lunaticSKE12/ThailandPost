@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "regis", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), "regis", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
                 startActivity(intent);
             }

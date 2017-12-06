@@ -23,6 +23,7 @@
     <string name="next">ต่อไป</string>
     <string name="keepbag">เก็บซอง</string>
     <string name="number">เลขที่</string>
+    <string name="UserDetailTitle">แบบสำรวจเพื่อเก็บข้อมูล</string>
     <string-array name="post_array">
         <item>แจ้งวัฒนะ</item>
         <item>ดอนเมือง</item>

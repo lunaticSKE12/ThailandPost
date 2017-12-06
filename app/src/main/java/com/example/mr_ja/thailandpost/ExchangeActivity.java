@@ -23,11 +23,13 @@ public class ExchangeActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String exchange_item = intent.getStringExtra("exchange_item");
         String balance_item = intent.getStringExtra("balance_item");
+        String serial_iem = intent.getStringExtra("serial_item");
         int exchange_item_number = Integer.parseInt(exchange_item);
         int balance_item_number = Integer.parseInt(balance_item);
-        Toast.makeText(getApplicationContext(),
-                exchange_item + " + " + balance_item, Toast.LENGTH_SHORT).show();
-        goods = new Goods(exchange_item_number, balance_item_number);
+        int serial_item_number = Integer.parseInt(serial_iem);
+//        Toast.makeText(getApplicationContext(),
+//                exchange_item + " + " + balance_item, Toast.LENGTH_SHORT).show();
+        goods = new Goods(exchange_item_number, balance_item_number, serial_item_number);
 
 
         exchangeNum = findViewById(R.id.exchangeNumber_id);
@@ -40,11 +42,12 @@ public class ExchangeActivity extends AppCompatActivity {
         exchangeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "exchange", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), "exchange", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), UserDetailActivity.class);
                 // pass parameter goods to next Activity
                 intent.putExtra("exchange_item", goods.exchange_toString());
                 intent.putExtra("balance_item" , goods.balance_toString());
+                intent.putExtra("serial_item", goods.serial_toString());
                 startActivity(intent);
 
             }
