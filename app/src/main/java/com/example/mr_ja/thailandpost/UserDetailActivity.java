@@ -1,9 +1,11 @@
 package com.example.mr_ja.thailandpost;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -11,11 +13,21 @@ public class UserDetailActivity extends AppCompatActivity {
 
     TextView nextBtn;
     Goods goods;
+    ImageView manBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_detail);
+
+        manBtn = findViewById(R.id.manBtn);
+        manBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int color = Color.parseColor("#AE6118"); //The color u want
+                manBtn.setColorFilter(color);
+            }
+        });
 
         // get parameter goods from last Activity
         Intent intent = getIntent();
