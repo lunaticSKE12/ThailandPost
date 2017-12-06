@@ -27,18 +27,28 @@ public class Goods{
         this.serial = serial;
     }
 
+    /**
+     * Intance constructor
+     */
     public Goods() {
         this.exchange_item = 30;
-
         this.balance_item = 100;
         this.serial = 7392;
     }
 
 
+    /**
+     * getSerial get number of goods serial.
+     * @return serial number of goods
+     */
     public int getSerial() {
         return serial;
     }
 
+    /**
+     * setSerial set goods serial number
+     * @param serial number to set goods serial
+     */
     public void setSerial(int serial) {
         this.serial = serial;
     }
@@ -91,10 +101,14 @@ public class Goods{
         return Integer.toString(balance_item);
     }
 
+    /**
+     * serial_toString prase integer of serial to string
+     * @return
+     */
     public String serial_toString() {return Integer.toString(serial); }
 
     /**
-     * update_goods is for update exchange_item and balance_item in store.
+     * update_goods is for update exchange_item, balance_item and serial number of goods in store.
      */
     public void update_goods(){
         this.exchange_item--;

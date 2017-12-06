@@ -38,8 +38,15 @@ public class UserDetailActivity extends AppCompatActivity {
         manBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                man_circle.setColorFilter(colorSelectedBackground);
-                manIcon.setColorFilter(colorSelectedIcon);
+                manBtn.setSelected(!manBtn.isSelected());
+                if(manBtn.isSelected()) {
+                    man_circle.setColorFilter(colorSelectedBackground);
+                    manIcon.setColorFilter(colorSelectedIcon);
+                }
+                else if (!manBtn.isSelected()){
+                    man_circle.setColorFilter(colorNonSelectedBackground);
+                    manIcon.setColorFilter(colorNonSelectedIcon);
+                }
             }
         });
 
@@ -51,8 +58,15 @@ public class UserDetailActivity extends AppCompatActivity {
         womanBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                woman_circle.setColorFilter(colorSelectedBackground);
-                womanIcon.setColorFilter(colorSelectedIcon);
+                womanBtn.setSelected(!womanBtn.isSelected());
+                if(womanBtn.isSelected()) {
+                    woman_circle.setColorFilter(colorSelectedBackground);
+                    womanIcon.setColorFilter(colorSelectedIcon);
+                }
+                else if(!womanBtn.isSelected()){
+                    woman_circle.setColorFilter(colorNonSelectedBackground);
+                    womanIcon.setColorFilter(colorNonSelectedIcon);
+                }
             }
         });
 
@@ -63,8 +77,16 @@ public class UserDetailActivity extends AppCompatActivity {
         questionBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                question_circle.setColorFilter(colorSelectedBackground);
-                questionIcon.setColorFilter(colorSelectedIcon);
+                questionBtn.setSelected(!questionBtn.isSelected());
+                if(questionBtn.isSelected()) {
+                    question_circle.setColorFilter(colorSelectedBackground);
+                    questionIcon.setColorFilter(colorSelectedIcon);
+                }
+                else if(!questionBtn.isSelected()){
+                    question_circle.setColorFilter(colorNonSelectedBackground);
+                    questionIcon.setColorFilter(colorNonSelectedIcon);
+                }
+
             }
         });
 
@@ -76,8 +98,16 @@ public class UserDetailActivity extends AppCompatActivity {
         kidsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                kids_circle.setColorFilter(colorSelectedBackground);
-                kidsIcon.setColorFilter(colorSelectedIcon);
+
+                kidsBtn.setSelected(!kidsBtn.isSelected());
+                if(kidsBtn.isSelected()) {
+                    kids_circle.setColorFilter(colorSelectedBackground);
+                    kidsIcon.setColorFilter(colorSelectedIcon);
+                }
+                else if(!kidsBtn.isSelected()){
+                    kids_circle.setColorFilter(colorNonSelectedBackground);
+                    kidsIcon.setColorFilter(colorNonSelectedIcon);
+                }
             }
         });
 
@@ -88,8 +118,15 @@ public class UserDetailActivity extends AppCompatActivity {
         teenBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                teen_circle.setColorFilter(colorSelectedBackground);
-                teenIcon.setColorFilter(colorSelectedIcon);
+                teenBtn.setSelected(!teenBtn.isSelected());
+                if(teenBtn.isSelected()) {
+                    teen_circle.setColorFilter(colorSelectedBackground);
+                    teenIcon.setColorFilter(colorSelectedIcon);
+                }
+                else if(!teenBtn.isSelected()){
+                    teen_circle.setColorFilter(colorNonSelectedBackground);
+                    teenIcon.setColorFilter(colorNonSelectedIcon);
+                }
             }
         });
 
@@ -100,8 +137,15 @@ public class UserDetailActivity extends AppCompatActivity {
         oldBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                old_circle.setColorFilter(colorSelectedBackground);
-                oldIcon.setColorFilter(colorSelectedIcon);
+                oldBtn.setSelected(!oldBtn.isSelected());
+                if(oldBtn.isSelected()) {
+                    old_circle.setColorFilter(colorSelectedBackground);
+                    oldIcon.setColorFilter(colorSelectedIcon);
+                }
+                else if(!oldBtn.isSelected()){
+                    old_circle.setColorFilter(colorNonSelectedBackground);
+                    oldIcon.setColorFilter(colorNonSelectedIcon);
+                }
             }
         });
 
